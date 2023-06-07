@@ -1,6 +1,6 @@
 import { StackContext, Table, Bucket } from "sst/constructs";
 
-export function StorageStack({ stack, app }: StackContext) {
+export function StorageStack({ stack }: StackContext) {
     // Create an S3 bucket
     const bucket = new Bucket(stack, "Uploads");
     // Create the DynamoDB table

@@ -2,7 +2,7 @@ import { Api, use } from "sst/constructs";
 import { StorageStack } from "./StorageStack";
 
 // @ts-ignore
-export function ApiStack({ stack, app }) {
+export function ApiStack({ stack }) {
     const { table } = use(StorageStack);
 
     // Create the API
