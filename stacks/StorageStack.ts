@@ -12,6 +12,12 @@ export function StorageStack({ stack, app }: StackContext) {
         primaryIndex: { partitionKey: "userId", sortKey: "noteId" },
     });
 
+    stack.addOutputs(
+        {
+            BucketArn: bucket.bucketArn,
+        }
+    )
+
     return {
         table,
         bucket,
